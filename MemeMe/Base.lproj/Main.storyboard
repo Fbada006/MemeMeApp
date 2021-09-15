@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,36 +48,37 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eat-YN-DdV" userLabel="Share Button">
-                                <rect key="frame" x="20" y="76" width="60" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal">
-                                    <imageReference key="image" image="square.and.arrow.up" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
-                                </state>
-                                <connections>
-                                    <action selector="onShareClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kBv-UV-bOT"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="umu-vC-aZY" userLabel="Top Toolbar">
+                                <rect key="frame" x="9" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="dy2-P0-CoY" userLabel="Share Action">
+                                        <connections>
+                                            <action selector="onShareClicked:" destination="BYZ-38-t0r" id="2xI-GC-GdB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="umu-vC-aZY" secondAttribute="trailing" constant="9" id="4UA-bH-7tq"/>
                             <constraint firstAttribute="bottom" secondItem="gw5-ZI-mA1" secondAttribute="bottom" id="5QA-XT-hQR"/>
+                            <constraint firstItem="umu-vC-aZY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="9" id="8G5-Um-kQU"/>
                             <constraint firstItem="lSR-GS-0ev" firstAttribute="bottom" secondItem="SSK-Gg-OVo" secondAttribute="bottom" id="8He-x3-sgD"/>
                             <constraint firstItem="gw5-ZI-mA1" firstAttribute="trailing" secondItem="SSK-Gg-OVo" secondAttribute="trailing" id="BDK-e0-fso"/>
+                            <constraint firstItem="umu-vC-aZY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DGV-GH-1MB"/>
                             <constraint firstItem="lSR-GS-0ev" firstAttribute="centerX" secondItem="SSK-Gg-OVo" secondAttribute="centerX" id="En5-g5-Icz"/>
-                            <constraint firstItem="eat-YN-DdV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="IP7-OW-7DR"/>
                             <constraint firstItem="lSR-GS-0ev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JX6-bU-4He"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MpW-De-CbR" secondAttribute="trailing" constant="20" id="K14-VK-jpp"/>
                             <constraint firstItem="gw5-ZI-mA1" firstAttribute="leading" secondItem="SSK-Gg-OVo" secondAttribute="leading" id="NsV-iJ-tu2"/>
-                            <constraint firstItem="eat-YN-DdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="T59-pA-CsC"/>
                             <constraint firstItem="MpW-De-CbR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V1x-br-J0q"/>
                             <constraint firstItem="MpW-De-CbR" firstAttribute="top" secondItem="SSK-Gg-OVo" secondAttribute="top" id="bd8-aK-d7F"/>
                             <constraint firstItem="SSK-Gg-OVo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="c52-ES-fnv"/>
                             <constraint firstItem="SSK-Gg-OVo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lOd-rf-bAR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SSK-Gg-OVo" secondAttribute="trailing" constant="28" id="oRz-fL-gcc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lSR-GS-0ev" secondAttribute="trailing" constant="20" id="x23-DQ-XUH"/>
+                            <constraint firstItem="umu-vC-aZY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="zQY-Tb-FKj"/>
                             <constraint firstItem="MpW-De-CbR" firstAttribute="centerX" secondItem="SSK-Gg-OVo" secondAttribute="centerX" id="zjG-aA-fm4"/>
                         </constraints>
                     </view>
@@ -86,7 +86,7 @@
                         <outlet property="bottomTextField" destination="lSR-GS-0ev" id="Rnt-9d-h2x"/>
                         <outlet property="imagePickerView" destination="SSK-Gg-OVo" id="37H-NO-6Fs"/>
                         <outlet property="pickFromCameraButton" destination="L6k-yr-f0J" id="s86-Ud-NdF"/>
-                        <outlet property="shareButton" destination="eat-YN-DdV" id="bGA-ef-fE1"/>
+                        <outlet property="shareButton" destination="dy2-P0-CoY" id="vRB-Ee-KbM"/>
                         <outlet property="topTextField" destination="MpW-De-CbR" id="onQ-Ky-Lfq"/>
                     </connections>
                 </viewController>
@@ -96,7 +96,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
