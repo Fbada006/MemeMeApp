@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-ZI-mA1">
-                                <rect key="frame" x="20" y="847" width="366" height="49"/>
+                                <rect key="frame" x="28" y="847" width="358" height="49"/>
                                 <items>
                                     <barButtonItem title="From Library" id="iWf-30-qe6">
                                         <connections>
@@ -40,12 +40,12 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MpW-De-CbR">
-                                <rect key="frame" x="187" y="144" width="32" height="34"/>
+                                <rect key="frame" x="20" y="144" width="374" height="34"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSR-GS-0ev">
-                                <rect key="frame" x="155" y="489" width="97" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lSR-GS-0ev">
+                                <rect key="frame" x="20" y="350" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -69,12 +69,16 @@
                             <constraint firstItem="gw5-ZI-mA1" firstAttribute="trailing" secondItem="SSK-Gg-OVo" secondAttribute="trailing" id="BDK-e0-fso"/>
                             <constraint firstItem="lSR-GS-0ev" firstAttribute="centerX" secondItem="SSK-Gg-OVo" secondAttribute="centerX" id="En5-g5-Icz"/>
                             <constraint firstItem="eat-YN-DdV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="IP7-OW-7DR"/>
+                            <constraint firstItem="lSR-GS-0ev" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JX6-bU-4He"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MpW-De-CbR" secondAttribute="trailing" constant="20" id="K14-VK-jpp"/>
                             <constraint firstItem="gw5-ZI-mA1" firstAttribute="leading" secondItem="SSK-Gg-OVo" secondAttribute="leading" id="NsV-iJ-tu2"/>
                             <constraint firstItem="eat-YN-DdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="T59-pA-CsC"/>
+                            <constraint firstItem="MpW-De-CbR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V1x-br-J0q"/>
                             <constraint firstItem="MpW-De-CbR" firstAttribute="top" secondItem="SSK-Gg-OVo" secondAttribute="top" id="bd8-aK-d7F"/>
                             <constraint firstItem="SSK-Gg-OVo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="c52-ES-fnv"/>
                             <constraint firstItem="SSK-Gg-OVo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lOd-rf-bAR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SSK-Gg-OVo" secondAttribute="trailing" constant="28" id="oRz-fL-gcc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lSR-GS-0ev" secondAttribute="trailing" constant="20" id="x23-DQ-XUH"/>
                             <constraint firstItem="MpW-De-CbR" firstAttribute="centerX" secondItem="SSK-Gg-OVo" secondAttribute="centerX" id="zjG-aA-fm4"/>
                         </constraints>
                     </view>
