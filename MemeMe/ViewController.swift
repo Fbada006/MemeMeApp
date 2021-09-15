@@ -42,16 +42,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     @IBAction func onPickClicked(_ sender: Any) {
+        pickImage(source: UIImagePickerController.SourceType.photoLibrary)
+    }
+    
+    fileprivate func pickImage(source: UIImagePickerController.SourceType) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        imagePicker.sourceType = source
         present(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func onPickFromCameraClicked(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerController.SourceType.camera
-        present(imagePicker, animated: true, completion: nil)
+        pickImage(source: UIImagePickerController.SourceType.camera)
     }
     
     @IBAction func onShareClicked(_ sender: Any) {
