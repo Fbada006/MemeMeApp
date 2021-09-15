@@ -13,9 +13,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var pickFromCameraButton: UIBarButtonItem!
     
     override func viewWillAppear(_ animated: Bool) {
         subscribeToKeyboardNotifications()
+        pickFromCameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
     }
     
     override func viewDidLoad() {
@@ -42,6 +44,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBAction func onPickClicked(_ sender: Any) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func onPickFromCameraClicked(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.SourceType.camera
         present(imagePicker, animated: true, completion: nil)
     }
     
