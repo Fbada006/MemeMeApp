@@ -17,12 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-ZI-mA1">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-ZI-mA1">
                                 <rect key="frame" x="20" y="847" width="366" height="49"/>
                                 <items>
-                                    <barButtonItem title="Pick" id="iWf-30-qe6">
+                                    <barButtonItem title="From Library" id="iWf-30-qe6">
                                         <connections>
                                             <action selector="onPickClicked:" destination="BYZ-38-t0r" id="sel-bT-EUj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="From Camera" id="L6k-yr-f0J">
+                                        <connections>
+                                            <action selector="onPickFromCameraClicked:" destination="BYZ-38-t0r" id="pH0-0z-dnZ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -76,6 +81,7 @@
                     <connections>
                         <outlet property="bottomTextField" destination="lSR-GS-0ev" id="Rnt-9d-h2x"/>
                         <outlet property="imagePickerView" destination="SSK-Gg-OVo" id="37H-NO-6Fs"/>
+                        <outlet property="pickFromCameraButton" destination="L6k-yr-f0J" id="s86-Ud-NdF"/>
                         <outlet property="shareButton" destination="eat-YN-DdV" id="bGA-ef-fE1"/>
                         <outlet property="topTextField" destination="MpW-De-CbR" id="onQ-Ky-Lfq"/>
                     </connections>
