@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-ZI-mA1">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="gw5-ZI-mA1" userLabel="Bottom Toolbar">
                                 <rect key="frame" x="28" y="847" width="358" height="49"/>
                                 <items>
                                     <barButtonItem title="From Library" id="iWf-30-qe6">
